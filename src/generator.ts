@@ -6,7 +6,6 @@ export function generateFiles(
     'SOUL.md': generateSoul(answers),
     'USER.md': generateUser(answers),
     'IDENTITY.md': generateIdentity(answers),
-    'AGENTS.md': generateAgents(answers),
   };
 }
 

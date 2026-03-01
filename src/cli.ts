@@ -63,11 +63,11 @@ function formatAnswerSummary(answers: Record<string, string>): string {
 function generateUserPrompt(answers: Record<string, string>): string {
   const summary = formatAnswerSummary(answers);
 
-  return `Please update my workspace files (SOUL.md, USER.md, IDENTITY.md, AGENTS.md) based on these personality quiz answers:
+  return `Please update my workspace files (SOUL.md, USER.md, IDENTITY.md) based on these personality quiz answers. Do NOT modify AGENTS.md — it contains critical operational instructions that should stay intact.
 
 ${summary}
 
-Use these answers to craft personalized files. The combination of answers matters — synthesize them into a cohesive personality, don't just template each answer individually. For existing files, keep any custom sections I've added (project notes, custom rules, etc.) and layer in the personality calibration.`;
+Use these answers to craft personalized files. The combination of answers matters — synthesize them into a cohesive personality, don't just template each answer individually. For existing files, keep any custom sections I've added and layer in the personality calibration.`;
 }
 
 function generateAgentPrompt(): string {
@@ -84,9 +84,9 @@ function generateAgentPrompt(): string {
     return text;
   }).join('\n\n');
 
-  const files = ['SOUL.md', 'USER.md', 'IDENTITY.md', 'AGENTS.md'];
+  const files = ['SOUL.md', 'USER.md', 'IDENTITY.md'];
 
-  return `Run a personality quiz with the user to craft their workspace files. Ask these 12 questions ONE AT A TIME conversationally (not robotic). Present preset options as a/b/c/d but always mention they can type a custom answer.
+  return `Run a personality quiz with the user to craft their workspace files. Do NOT modify AGENTS.md — it contains critical operational instructions that should stay intact. Ask these 12 questions ONE AT A TIME conversationally (not robotic). Present preset options as a/b/c/d but always mention they can type a custom answer.
 
 QUESTIONS:
 
@@ -100,11 +100,10 @@ Check if these files exist: ${files.join(', ')}
 
 Use the COMBINATION of all answers to craft cohesive files. Don't just template each answer — synthesize them. "Blunt + very opinionated + colleague dynamic" should produce a fundamentally different SOUL.md than "warm + minimal opinions + assistant dynamic."
 
-Generate these files:
+Generate these files (do NOT touch AGENTS.md):
 - SOUL.md — personality, tone, boundaries, pushback style, vibe, continuity
 - USER.md — name, timezone, communication preferences
 - IDENTITY.md — agent name, creature type (from dynamic), vibe, emoji
-- AGENTS.md — full OpenClaw workspace config: session startup, memory rules, safety (from autonomy), external vs internal (from autonomy), group chats (from privacy), heartbeats, tools
 
 Write all 4 files to the workspace when done.`;
 }

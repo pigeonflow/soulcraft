@@ -1,6 +1,6 @@
 {
   "name": "soulcraft",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "module",
   "description": "Craft your AI agent's personality in 2 minutes",
   "bin": {

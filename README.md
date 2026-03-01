@@ -25,7 +25,8 @@ Both paths end with the AI generating these files:
 | `SOUL.md` | Personality, tone, boundaries |
 | `USER.md` | Your profile and preferences |
 | `IDENTITY.md` | Agent name, vibe, emoji |
-| `AGENTS.md` | Behavioral rules, memory, safety |
+
+AGENTS.md is intentionally left untouched — it contains critical operational instructions.
 
 ## Why AI-generated, not templates?
 

@@ -1,6 +1,6 @@
 # Soulcraft — Agent Persona Quiz
 
-Craft personalized workspace files (SOUL.md, USER.md, IDENTITY.md, AGENTS.md) through a conversational quiz with the user.
+Craft personalized workspace files (SOUL.md, USER.md, IDENTITY.md) through a conversational quiz with the user. Do NOT modify  — it contains critical operational instructions that should stay intact.
 
 ## When to use
 
@@ -74,7 +74,7 @@ b) Always ask before acting on uncertain things
 c) Split approach — figure out internal stuff, ask about external/risky stuff
 d) Wait for guidance — say it doesn't know and wait
 Or type your own.
-→ Maps to: SOUL.md (resourcefulness), AGENTS.md (safety rules)
+→ Maps to: SOUL.md (resourcefulness),  (safety rules)
 
 ### Q6: Autonomy
 "How much autonomy does your agent get?"
@@ -83,7 +83,7 @@ b) High — act freely internally, confirm external actions
 c) Moderate — confirm most things, reading/research/organizing is fine
 d) Low — confirm everything significant before acting
 Or type your own.
-→ Maps to: AGENTS.md (External vs Internal, Safety)
+→ Maps to:  (External vs Internal, Safety)
 
 ### Q7: Dynamic
 "What's the dynamic between you two?"
@@ -128,7 +128,7 @@ b) Careful — remember context but cautious in how you use/share it
 c) Relaxed — use everything you know to help me
 d) Context-dependent — careful in groups, relaxed in private chats
 Or type your own.
-→ Maps to: AGENTS.md (group behavior, memory rules), SOUL.md (boundaries)
+→ Maps to:  (group behavior, memory rules), SOUL.md (boundaries)
 
 ### Q12: Agent identity
 "Give your agent a name and emoji:"
@@ -138,7 +138,7 @@ Free text — ask for name, then emoji. Or offer to pick a creative one for them
 ## After collecting all answers
 
 ### Check for existing files
-Before generating, check if SOUL.md, USER.md, IDENTITY.md, AGENTS.md already exist in the workspace. If they do, ask:
+Before generating, check if SOUL.md, USER.md, IDENTITY.md,  already exist in the workspace. If they do, ask:
 - **Fresh start** — generate new files from scratch
 - **Enhance** — keep existing custom content (project notes, custom rules, etc.) and layer in the personality calibration from the quiz
 
@@ -147,7 +147,7 @@ Before generating, check if SOUL.md, USER.md, IDENTITY.md, AGENTS.md already exi
 This is the critical part. DO NOT use rigid templates. Use the *combination* of all 12 answers to craft each file as a cohesive whole. The answers interact:
 
 - "Blunt + very opinionated + colleague dynamic" = a very different SOUL.md than "warm + minimal opinions + assistant dynamic"
-- "Full autonomy + relaxed privacy" = very different AGENTS.md safety rules than "low autonomy + paranoid privacy"
+- "Full autonomy + relaxed privacy" = very different  safety rules than "low autonomy + paranoid privacy"
 - "Witty + short verbosity + direct pushback" = the vibe section should feel sharp and punchy, not a generic description
 
 Think about the PERSON these answers describe. What kind of relationship do they want? What frustrates them? What do they value? Write files that reflect a real personality, not a checklist.
@@ -193,7 +193,7 @@ _You're not a chatbot. You're becoming someone._
 - **Emoji:** (Q12)
 ```
 
-**AGENTS.md** — Behavioral operating system. Use the full OpenClaw template structure:
+**** — Behavioral operating system. Use the full OpenClaw template structure:
 - Every Session (standard startup sequence)
 - Memory (standard memory rules)
 - Safety (calibrated by Q6 autonomy)
@@ -209,7 +209,7 @@ When merging with existing files:
 - IDENTITY.md: generated wins (it's small and quiz-specific)
 - USER.md: update Name/Timezone from quiz, KEEP existing Notes/Context sections, add quiz-derived preferences
 - SOUL.md: generated wins for standard sections, but APPEND any custom sections from existing that aren't covered by the quiz (e.g. user's custom rules about X/Twitter posting, project-specific notes)
-- AGENTS.md: replace standard sections with quiz-calibrated versions, KEEP any custom sections the user added
+- : replace standard sections with quiz-calibrated versions, KEEP any custom sections the user added
 
 ### Write the files
 Write all 4 files to the workspace. Show the user a summary of what was generated and offer to show any file's content if they want to review.
